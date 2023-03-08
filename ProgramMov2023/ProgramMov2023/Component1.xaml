@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramMov2023.Component1">
+    
+        <StackLayout Spacing="20" Margin="20">
+
+
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+            <Label Text="Welcome"  TextColor="DarkGray"   FontAttributes="Bold" FontSize="Medium" ></Label>
+        </StackLayout>
+            
+        <StackLayout VerticalOptions="CenterAndExpand"  Margin="10" Spacing="10">
+              <BoxView  VerticalOptions="Center"   Color="LightSlateGray"
+                      WidthRequest="5"
+                      HeightRequest="5"
+                      CornerRadius="20"
+                      />
+
+             <ActivityIndicator  IsRunning="True"  HeightRequest="40"  Color="LightSteelBlue"/>
+             <DatePicker WidthRequest="200" MinimumDate="01/02/2023"
+                         MaximumDate="03/07/2023" Format="F" Margin="30" />
+            <Editor  Placeholder="Observaciones"  AutoSize="TextChanges" 
+                     MaxLength="30" TextTransform="Uppercase"  CharacterSpacing="1"/>
+
+
+            <Entry Placeholder="Nombre"  PlaceholderColor="LightSteelBlue"  
+                   ClearButtonVisibility="WhileEditing" ReturnType="Next" 
+                   TextTransform="Uppercase"  Keyboard="Text" IsPassword="True"  ></Entry>
+
+
+            <Picker Title="Select"  TitleColor="DarkGreen"  />
+            
+        </StackLayout>
+
+        
+
+        <Button Text="Aceptar"  CornerRadius="30" Margin="0,0,0,50" BackgroundColor="LightSteelBlue" WidthRequest="120" HorizontalOptions="Center"/>
+
+
+
+    </StackLayout>
+   
+</ContentPage>

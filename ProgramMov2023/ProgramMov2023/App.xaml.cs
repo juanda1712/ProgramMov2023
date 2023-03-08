@@ -10,7 +10,7 @@ namespace ProgramMov2023
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Component2();
         }
 
         protected override void OnStart()
