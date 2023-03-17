@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramMov2023.TableView">
+    
+        <StackLayout>
+        <TableView  Margin="20" Intent="Settings" BackgroundColor="AliceBlue" >
+            <TableRoot>
+                <TableSection Title="Sound" TextColor="LightGray" >
+                    <SwitchCell Text="LLamadas" On="false" />
+                    <SwitchCell Text="msj" On="false" />
+                </TableSection>
+
+                <TableSection Title="Notif" TextColor="LightGray" >
+                    <SwitchCell Text="Activar Notif" On="false" />
+                    <TextCell Text="Config 1" Detail="" />
+                    <EntryCell Label="" Placeholder="escribir opinion" />
+                </TableSection>
+                <TableSection Title="Custom">
+                    <ViewCell>
+                        <StackLayout Margin="10" Padding="2" Orientation="Horizontal">
+                            <Image Source="user.png" />
+                            <Label Text="Config sdfsd s dfsdf" TextColor="LightSlateGray"></Label>
+                            <Label HorizontalOptions="EndAndExpand" Text="Android"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+   
+</ContentPage>

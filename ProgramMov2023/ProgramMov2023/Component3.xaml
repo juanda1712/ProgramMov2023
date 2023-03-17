@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramMov2023.Component3">
+
+        <StackLayout Margin="20" Spacing="10">
+
+
+        <ProgressBar Progress="0.25" ProgressColor="red" HeightRequest="20" />
+        <SearchBar Placeholder="Buscar por nombre"
+                   CancelButtonColor="Black"
+                   TextColor="LightSlateGray"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Medium"
+                   TextTransform="Uppercase"  />
+        <Slider Minimum="0" Maximum="100"  
+                MinimumTrackColor="IndianRed"
+                MaximumTrackColor="GreenYellow"
+                ThumbColor="WhiteSmoke" />
+        <Stepper Minimum="0" Maximum="4" Increment="1" BackgroundColor="AliceBlue"/>
+        <Switch IsToggled="false" OnColor="Green"  ThumbColor="White" />
+        <TimePicker Format="T" TextColor="DarkBlue" HorizontalOptions="Center" />
+       
+    </StackLayout>
+ 
+</ContentPage>
