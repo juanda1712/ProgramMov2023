@@ -10,7 +10,7 @@ namespace ProgramMov2023
         {
             InitializeComponent();
 
-            MainPage = new TableView();
+            MainPage = new Scroll();
         }
 
         protected override void OnStart()

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramMov2023.Scroll">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <StackLayout>
+                <Label Text="Titulo" FontSize="Medium"></Label>
+
+                <StackLayout>
+                    <ScrollView>
+                    <Label
+                    Text=" La inteligencia artificial o IA (Artificial Intelligence, o AI en inglés) es la simulación de procesos de inteligencia humana por parte de máquinas,
+                    especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) y
+                    la autocorrección. Las aplicaciones particulares de la AI incluyen sistemas expertos, reconocimiento de voz y visión artificial.El término AI fue acuñado por John McCarthy,
+                    un informático estadounidense, en 1956 durante la Conferencia de Dartmouth, donde nació la disciplina. Hoy en día, es un término general que abarca todo, desde la automatización de procesos robóticos hasta la robótica actual.
+                    Ha ganado prominencia recientemente debido, en parte, 
+                     especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) y
+                    la autocorrección. Las aplicaciones particulares de la AI incluyen sistemas expertos, reconocimiento de voz y visión artificial.El término AI fue acuñado por John McCarthy,
+                    un informático estadounidense, en 1956 durante la Conferencia de Dartmouth, donde nació la disciplina. Hoy en día, es un término general que abarca todo, desde la automatización de procesos robóticos hasta la robótica actual.
+                    Ha ganado prominencia recientemente debido, en parte, 
+                    a los grandes volúmenes de datos, o al aumento de velocidad, tamaño y variedad de datos 
+                    que las empresas están recopilando. La IA puede realizar tareas tales como identificar patrones en los datos de manera más eficiente que los seres humanos, lo que permite a las empresas obtener más información sobre sus datos. La inteligencia artificial o IA (Artificial Intelligence, o AI en inglés) es la simulación de procesos de inteligencia humana por parte de máquinas,
+                    especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) y
+                    la autocorrección. Las aplicaciones particulares de la AI incluyen sistemas expertos, reconocimiento de voz y visión artificial.El término AI fue acuñado por John McCarthy,
+                    un informático estadounidense, en 1956 durante la Conferencia de Dartmouth, donde nació la disciplina. Hoy en día, es un término general que abarca todo, desde la automatización de procesos robóticos hasta la robótica actual.
+                    Ha ganado prominencia recientemente debido, en parte, 
+                    a los grandes volúmenes de datos, o al aumento de velocidad, tamaño y variedad de datos 
+                    que las empresas están recopilando. La IA puede realizar tareas tales como identificar patrones en los datos de manera más eficiente que los seres humanos, lo que permite a las empresas obtener más información sobre sus datos."></Label>
+
+                    </ScrollView>
+                </StackLayout>
+
+                <Label Text="Titulo" FontSize="Medium"></Label>
+                <StackLayout>
+                    <ScrollView>
+                        <Label
+                    Text=" La inteligencia artificial o IA (Artificial Intelligence, o AI en inglés) es la simulación de procesos de inteligencia humana por parte de máquinas,
+                    especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) y
+                    la autocorrección. Las aplicaciones particulares de la AI incluyen sistemas expertos, reconocimiento de voz y visión artificial.El término AI fue acuñado por John McCarthy,
+                    un informático estadounidense, en 1956 durante la Conferencia de Dartmouth, donde nació la disciplina. Hoy en día, es un término general que abarca todo, desde la automatización de procesos robóticos hasta la robótica actual.
+                    Ha ganado prominencia recientemente debido, en parte, 
+                     especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) y
+                    la autocorrección. Las aplicaciones particulares de la AI incluyen sistemas expertos, reconocimiento de voz y visión artificial.El término AI fue acuñado por John McCarthy,
+                    un informático estadounidense, en 1956 durante la Conferencia de Dartmouth, donde nació la disciplina. Hoy en día, es un término general que abarca todo, desde la automatización de procesos robóticos hasta la robótica actual.
+                    Ha ganado prominencia recientemente debido, en parte, 
+                    a los grandes volúmenes de datos, o al aumento de velocidad, tamaño y variedad de datos 
+                    que las empresas están recopilando. La IA puede realizar tareas tales como identificar patrones en los datos de manera más eficiente que los seres humanos, lo que permite a las empresas obtener más información sobre sus datos. La inteligencia artificial o IA (Artificial Intelligence, o AI en inglés) es la simulación de procesos de inteligencia humana por parte de máquinas,
+                    especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) y
+                    la autocorrección. Las aplicaciones particulares de la AI incluyen sistemas expertos, reconocimiento de voz y visión artificial.El término AI fue acuñado por John McCarthy,
+                    un informático estadounidense, en 1956 durante la Conferencia de Dartmouth, donde nació la disciplina. Hoy en día, es un término general que abarca todo, desde la automatización de procesos robóticos hasta la robótica actual.
+                    Ha ganado prominencia recientemente debido, en parte, 
+                    a los grandes volúmenes de datos, o al aumento de velocidad, tamaño y variedad de datos 
+                    que las empresas están recopilando. La IA puede realizar tareas tales como identificar patrones en los datos de manera más eficiente que los seres humanos, lo que permite a las empresas obtener más información sobre sus datos."></Label>
+
+                    </ScrollView>
+                </StackLayout>
+
+            </StackLayout>
+                  
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

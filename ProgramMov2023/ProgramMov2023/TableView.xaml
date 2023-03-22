@@ -23,6 +23,7 @@
                             <Label Text="Config sdfsd s dfsdf" TextColor="LightSlateGray"></Label>
                             <Label HorizontalOptions="EndAndExpand" Text="Android"></Label>
                         </StackLayout>
+                        
                     </ViewCell>
                 </TableSection>
                 
