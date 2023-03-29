@@ -10,7 +10,7 @@ namespace ProgramMov2023
         {
             InitializeComponent();
 
-            MainPage = new Scroll();
+            MainPage = new Bidning_example();
         }
 
         protected override void OnStart()

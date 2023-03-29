@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramMov2023.Bidning_example">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Spacing="20">
+
+
+
+                <StackLayout Orientation="Vertical" Margin="10" Padding="10">
+                    <Entry Placeholder="Nombre" x:Name="etnombre" ></Entry>
+                    <Entry Placeholder="Apellido"  x:Name="etapellido" ></Entry>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox ></CheckBox>
+                        <Label Text="Rec" ></Label>
+                    </StackLayout>
+
+                </StackLayout>
+
+
+                <StackLayout Margin="10">
+                    <Label Text="" x:Name="lbResumen" ></Label>
+                    
+                    <Button   Text="Aceptar"></Button>
+
+                </StackLayout>
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
