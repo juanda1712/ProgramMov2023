@@ -25,7 +25,7 @@ namespace ProgramMov2023
 
             nombre = etnombre.Text;
             apellido = etapellido.Text;
-
+            
             if (string.IsNullOrEmpty(nombre))
             {
 

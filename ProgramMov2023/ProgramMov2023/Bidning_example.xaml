@@ -1,31 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Font_ico ="clr-namespace:ProgramMov2023.Fonts"
              x:Class="ProgramMov2023.Bidning_example">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Spacing="20">
+            <StackLayout>
 
 
 
-                <StackLayout Orientation="Vertical" Margin="10" Padding="10">
-                    <Entry Placeholder="Nombre" x:Name="etnombre" ></Entry>
+                <StackLayout Orientation="Vertical"  Padding="10">
+                    <Entry Placeholder="Nombre" FontFamily="Dahlia" x:Name="etnombre"  ></Entry>
                     <Entry Placeholder="Apellido"  x:Name="etapellido" ></Entry>
                     <StackLayout Orientation="Horizontal">
                         <CheckBox ></CheckBox>
-                        <Label Text="Rec" ></Label>
+                        <Label Text="Rec" FontSize="Medium" FontFamily="Dahlia"></Label>
                     </StackLayout>
 
                 </StackLayout>
 
 
-                <StackLayout Margin="10">
+                <StackLayout >
                     <Label Text="" x:Name="lbResumen" ></Label>
-                    
-                    <Button   Text="Aceptar"></Button>
-
+                    <Button Style="{StaticResource btnPrimary}"></Button>
+                    <Button Style="{StaticResource btnSecondary}"></Button>
                 </StackLayout>
 
+                <Label Text="&#xE804;"  TextColor="Red" FontSize="50" FontFamily="fontello"></Label>
+
+                <Label Text="{x:Static  Font_ico:IconFont.Mail}"  TextColor="Red" FontSize="50" FontFamily="fontello"></Label>
 
             </StackLayout>
         </StackLayout>
