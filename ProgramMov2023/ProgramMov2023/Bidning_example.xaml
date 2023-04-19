@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Font_ico ="clr-namespace:ProgramMov2023.Fonts"
+             NavigationPage.HasNavigationBar="False"
              x:Class="ProgramMov2023.Bidning_example">
     <ContentPage.Content>
         <StackLayout>
@@ -12,17 +13,29 @@
                 <StackLayout Orientation="Vertical"  Padding="10">
                     <Entry Placeholder="Nombre" FontFamily="Dahlia" x:Name="etnombre"  ></Entry>
                     <Entry Placeholder="Apellido"  x:Name="etapellido" ></Entry>
-                    <StackLayout Orientation="Horizontal">
-                        <CheckBox ></CheckBox>
-                        <Label Text="Rec" FontSize="Medium" FontFamily="Dahlia"></Label>
+                    <StackLayout Orientation="Horizontal" Spacing="20">
+                        <Slider x:Name="sldExample"  WidthRequest="200" Maximum="100"  ThumbColor="Black" />
+                        <Label  x:Name="lblslider"   TextColor="Black" BindingContext="{x:Reference sldExample}" Text="{x:Binding Value }" FontSize="50" FontFamily="Dahlia" ></Label>
                     </StackLayout>
+
+                    <Label  x:Name="lbletry"   TextColor="Black" BindingContext="{x:Reference etnombre}" Text="{x:Binding Text }" FontSize="50" FontFamily="Dahlia" ></Label>
+                    
+                    
+                    <Switch x:Name="swhijos" IsToggled="True" HorizontalOptions="Start" />
+
+                </StackLayout>
+
+                <StackLayout  BindingContext="{x:Reference swhijos}" IsVisible="{x:Binding IsToggled}" Orientation="Vertical"  Padding="10">
+                    <Entry Placeholder="Nombre del Hijo" FontFamily="Dahlia" x:Name="etnombrehj"  ></Entry>
+                    <Entry Placeholder="Apellido del hijo"  x:Name="etapellidohj" ></Entry>
+                
 
                 </StackLayout>
 
 
                 <StackLayout >
                     <Label Text="" x:Name="lbResumen" ></Label>
-                    <Button Style="{StaticResource btnPrimary}"></Button>
+                    <Button Style="{StaticResource btnPrimary}" Clicked="Button_Clicked"  ></Button>
                     <Button Style="{StaticResource btnSecondary}"></Button>
                 </StackLayout>
 
