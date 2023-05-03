@@ -52,7 +52,6 @@ namespace AgendaMVVM.ViewModel
         }
         #endregion
 
-
         #region Method
 
 
