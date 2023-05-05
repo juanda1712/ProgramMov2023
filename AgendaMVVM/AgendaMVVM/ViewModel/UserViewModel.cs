@@ -1,4 +1,6 @@
-﻿using GalaSoft.MvvmLight.Command;
+﻿using AgendaMVVM.Model;
+using AgendaMVVM.Views;
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -50,6 +52,16 @@ namespace AgendaMVVM.ViewModel
             }
             set { }
         }
+
+
+        public ICommand RegisterCommand
+        {
+            get
+            {
+                return new RelayCommand(OpenViewRegister);
+            }
+            set { }
+        }
         #endregion
 
         #region Method
@@ -58,21 +70,33 @@ namespace AgendaMVVM.ViewModel
         public async void Validate_login()
         {
 
-            if (Usertxt == "ADMIN" && PasswordTxt == "1234")
+            UserModel Usr = App.DB.GetUserModel(user, password).Result;
+
+            if (Usr == null)
             {
 
-                await Application.Current.MainPage.DisplayAlert("Login", "Welcome to Xamarin", "Aceptar");
+                await Application.Current.MainPage.DisplayAlert("Login", "Error en contraseña", "Aceptar");
+                PasswordTxt = "";
+                
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Login", "Error en contraseña", "Aceptar");
-                PasswordTxt = "";
+                await Application.Current.MainPage.DisplayAlert("Login", "Welcome to Xamarin", "Aceptar");
+                await Application.Current.MainPage.Navigation.PushAsync(new Home());
+
             }
 
         }
         #endregion
 
+        public async void OpenViewRegister()
+        {
 
+                await Application.Current.MainPage.Navigation.PushAsync(new Register());
+
+          
+
+        }
 
     }
 }
