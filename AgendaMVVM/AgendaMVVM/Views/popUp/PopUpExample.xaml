@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage   xmlns="http://xamarin.com/schemas/2014/forms"   
+                 xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaMVVM.Views.popUp.PopUpExample">
+
+    <StackLayout VerticalOptions="Center" BackgroundColor="LightGray">
+        <StackLayout Margin="20" VerticalOptions="Center" Spacing="20" >
+            <Label Text="Titulo" />
+            <Label x:Name="lbldet" Text="Detalle" />
+            <Button Text="Cerrar" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+        
+    </StackLayout>
+    
+</popup:PopupPage>

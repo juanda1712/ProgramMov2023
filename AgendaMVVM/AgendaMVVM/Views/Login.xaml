@@ -25,7 +25,7 @@
 
             <StackLayout Grid.Row="2"  Orientation="Horizontal" Margin="15" Spacing="20">
                 <Button Text="Registrarse" Command="{Binding RegisterCommand}" BackgroundColor="LightSteelBlue" HorizontalOptions="StartAndExpand"></Button>
-                <Button Text="Recuperar PW" Clicked="Button_Clicked" BackgroundColor="LightSkyBlue" HorizontalOptions="EndAndExpand"></Button>
+                <Button Text="Recuperar PW" Command="{Binding RecordarCommand}" BackgroundColor="LightSkyBlue" HorizontalOptions="EndAndExpand"></Button>
             </StackLayout>
 
           

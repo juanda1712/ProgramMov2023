@@ -22,11 +22,7 @@ namespace AgendaMVVM.BD
 
         #region CRUD
 
-        public Task<int> SaveUserModel(UserModel _usermodel )
-        {
-            return _database.InsertAsync(_usermodel);
-
-        }
+    
 
         /// <summary>
         /// Generica
@@ -63,12 +59,16 @@ namespace AgendaMVVM.BD
             return _database.Table<T>().ToListAsync();
 
         }
-     
+
         /// 
-       
-       
 
 
+
+        public Task<int> SaveUserModel(UserModel _usermodel)
+        {
+            return _database.InsertAsync(_usermodel);
+
+        }
         public Task<List<UserModel>>GetUserModelList()
         {
             return  _database.Table<UserModel>().ToListAsync();

@@ -1,11 +1,15 @@
 ﻿using AgendaMVVM.Model;
 using AgendaMVVM.Views;
+using AgendaMVVM.Views.popUp;
 using GalaSoft.MvvmLight.Command;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Rg.Plugins.Popup.Services;
+using Plugin.LocalNotification;
 
 namespace AgendaMVVM.ViewModel
 {
@@ -62,6 +66,19 @@ namespace AgendaMVVM.ViewModel
             }
             set { }
         }
+
+        public ICommand RecordarCommand
+        {
+            get
+            {
+                return new RelayCommand(OpenViewRecordar);
+            }
+            set { }
+        }
+
+        
+
+
         #endregion
 
         #region Method
@@ -88,13 +105,26 @@ namespace AgendaMVVM.ViewModel
 
         }
         #endregion
-
         public async void OpenViewRegister()
         {
 
-                await Application.Current.MainPage.Navigation.PushAsync(new Register());
+            await Application.Current.MainPage.Navigation.PushAsync(new Register());
 
-          
+
+
+        }
+        public async void OpenViewRecordar()
+        {
+
+            var notif = new NotificationRequest();
+            notif.Title = "Alerta";
+            notif.Description = "Alerta cambio de contraseña";
+            notif.NotificationId = 123;
+            notif.BadgeNumber = 2;
+            await LocalNotificationCenter.Current.Show(notif);
+
+            await PopupNavigation.Instance.PushAsync(new PopUpExample("detalle por parametro"));
+
 
         }
 
