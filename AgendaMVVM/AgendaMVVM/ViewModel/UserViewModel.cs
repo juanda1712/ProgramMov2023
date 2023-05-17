@@ -10,6 +10,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Rg.Plugins.Popup.Services;
 using Plugin.LocalNotification;
+using AgendaMVVM.Views.MaestroDetalle;
 
 namespace AgendaMVVM.ViewModel
 {
@@ -108,7 +109,7 @@ namespace AgendaMVVM.ViewModel
         public async void OpenViewRegister()
         {
 
-            await Application.Current.MainPage.Navigation.PushAsync(new Register());
+            await Application.Current.MainPage.Navigation.PushAsync(new MenuLateral());
 
 
 
