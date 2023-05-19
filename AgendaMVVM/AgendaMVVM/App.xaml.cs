@@ -28,7 +28,7 @@ namespace AgendaMVVM
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Login());
+            MainPage = new CustomerNav(new Login());
         }
 
         protected override void OnStart()

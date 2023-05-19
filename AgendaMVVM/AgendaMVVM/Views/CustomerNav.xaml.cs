@@ -10,17 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace AgendaMVVM.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Home : ContentPage
+    public partial class CustomerNav : NavigationPage
     {
-        public Home()
+        public CustomerNav()
         {
             InitializeComponent();
         }
 
-        private  async void Button_Clicked(object sender, EventArgs e)
+        public CustomerNav(Page root) : base(root)
         {
-            //await Navigation.PopAsync();
-            await Navigation.PopToRootAsync(); // HOME
+            InitializeComponent();
         }
+
     }
 }
