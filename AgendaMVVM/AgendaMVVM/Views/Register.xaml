@@ -4,9 +4,21 @@
              x:Class="AgendaMVVM.Views.Register">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Register Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout>
+                <Entry Placeholder="Usuario" Text="{Binding Usertxt, Mode=TwoWay}" PlaceholderColor="LightSlateGray"></Entry>
+            </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Nombre" Text="{Binding Nametxt, Mode=TwoWay}" PlaceholderColor="LightSlateGray"></Entry>
+            </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Contraseña" Text="{Binding PasswordTxt, Mode=TwoWay}"  PlaceholderColor="LightSlateGray"></Entry>
+            </StackLayout>
+
+            <StackLayout  Orientation="Horizontal" Margin="15" Spacing="20">
+                <Button Text="Aceptar" Command="{Binding SaveCommand}" BackgroundColor="LightSteelBlue" HorizontalOptions="StartAndExpand"></Button>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -20,6 +20,9 @@ namespace AgendaMVVM.ViewModel
 
         private string user;
         private string password;
+        private string name;
+        private int id;
+
 
         #endregion
 
@@ -42,8 +45,16 @@ namespace AgendaMVVM.ViewModel
             get { return password; }
             set { SetValue(ref  this.password , value); }
         }
-
-
+        public string Nametxt
+        {
+            get { return name; }
+            set { SetValue(ref this.name, value); }
+        }
+        public int Idtxt
+        {
+            get { return id; }
+            set { SetValue(ref this.id, value); }
+        }
 
         #endregion
 
@@ -77,8 +88,15 @@ namespace AgendaMVVM.ViewModel
             set { }
         }
 
-        
 
+        public ICommand SaveCommand
+        {
+            get
+            {
+                return new RelayCommand(SaveUser);
+            }
+            set { }
+        }
 
         #endregion
 
@@ -105,13 +123,45 @@ namespace AgendaMVVM.ViewModel
             }
 
         }
+
+
+        public async void SaveUser()
+        {
+
+
+            if (string.IsNullOrEmpty(this.user))
+            {
+                await Application.Current.MainPage.DisplayAlert("Register", "Por favor Ingresar el Usuario", "Aceptar");
+                PasswordTxt = "";
+                return;
+            }
+
+
+            UserModel Usr = new UserModel();
+            Usr.Nombre = name;
+            Usr.Pw = password;
+            Usr.User = user;
+            Usr.UserId = id;
+
+
+            await App.DB.SaveModel<UserModel>(Usr, true);
+            await Application.Current.MainPage.DisplayAlert("Register", " Registro Exitoso", "Aceptar");
+
+
+            //await App.DB.SaveModel<UserModel>(Usr, false);
+            //await Application.Current.MainPage.DisplayAlert("Register", " Modificacion Exitosa", "Aceptar");
+
+
+        }
+
+
         #endregion
         public async void OpenViewRegister()
         {
 
-            await Application.Current.MainPage.Navigation.PushAsync(new MenuLateral());
+            //await Application.Current.MainPage.Navigation.PushAsync(new MenuLateral());
 
-
+            await Application.Current.MainPage.Navigation.PushAsync(new Register ());
 
         }
         public async void OpenViewRecordar()

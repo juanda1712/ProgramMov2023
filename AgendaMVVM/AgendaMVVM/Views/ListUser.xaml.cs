@@ -11,12 +11,17 @@ using Xamarin.Forms.Xaml;
 namespace AgendaMVVM.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Register : ContentPage
+    public partial class ListUser : ContentPage
     {
-        public Register()
+        public ListUser()
         {
             InitializeComponent();
             BindingContext = new UserViewModel();
+        }
+
+        private void ListV_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
         }
     }
 }
