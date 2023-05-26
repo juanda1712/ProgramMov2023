@@ -10,7 +10,11 @@
             <Button Clicked="Button_Clicked" Text="Atras">
                 
             </Button>
-            
+
+
+            <Button x:Name="ListaUser"  Clicked="ListaUser_Clicked" Text="Listado de usuarios" >
+
+            </Button>
             <Label Text="Welcome to Xamarin.Forms!  HOME"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

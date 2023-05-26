@@ -28,19 +28,15 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center" >
-                                    <Label Text="{Binding Nombre}" FontSize="15"></Label>
-                                </StackLayout>
-                                <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center" >
-                                    <Label Text="{Binding Nombre}" FontSize="15"></Label>
+                                    <Label Text="{Binding User}" FontSize="15"></Label>
                                 </StackLayout>
 
+
                                 <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Vertical"  Spacing="5" VerticalOptions="Center" >
-                                    <Label Text="{Binding Nombre}" FontSize="15"></Label>
-                                    <Label Text="{Binding Nombre}" FontSize="15"></Label>
-                                    <Label Text="{Binding Nombre}" FontSize="15"></Label>
+                                    <Label Text="{Binding Nombre}" FontSize="15"></Label>                                
+                                  
                                 </StackLayout>
-                                
-                                
+
                             </Grid>
                             
                         </ViewCell>

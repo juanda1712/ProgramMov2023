@@ -1,4 +1,6 @@
-﻿using AgendaMVVM.ViewModel;
+﻿using AgendaMVVM.Model;
+using AgendaMVVM.ViewModel;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +23,7 @@ namespace AgendaMVVM.Views
 
         private void ListV_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            PopupNavigation.Instance.PushAsync(new popUp.PopUpDetail(e.SelectedItem as UserModel));
         }
     }
 }

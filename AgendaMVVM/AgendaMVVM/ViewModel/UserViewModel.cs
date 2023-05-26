@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using Rg.Plugins.Popup.Services;
 using Plugin.LocalNotification;
 using AgendaMVVM.Views.MaestroDetalle;
+using System.Threading.Tasks;
 
 namespace AgendaMVVM.ViewModel
 {
@@ -22,7 +23,7 @@ namespace AgendaMVVM.ViewModel
         private string password;
         private string name;
         private int id;
-
+        private object listViewSource;
 
         #endregion
 
@@ -54,6 +55,15 @@ namespace AgendaMVVM.ViewModel
         {
             get { return id; }
             set { SetValue(ref this.id, value); }
+        }
+
+        public object ListViewSource
+        {
+            get
+            {
+                return this.listViewSource;
+            }
+            set { SetValue(ref this.listViewSource, value); }
         }
 
         #endregion
@@ -155,6 +165,13 @@ namespace AgendaMVVM.ViewModel
         }
 
 
+
+        public async Task LoadList()
+        {
+            ListViewSource = await App.DB.GetModel<UserModel>();
+      
+        }
+
         #endregion
         public async void OpenViewRegister()
         {
@@ -178,6 +195,21 @@ namespace AgendaMVVM.ViewModel
 
 
         }
+
+
+        public UserViewModel()
+        {
+            LoadList();
+        }
+
+        public UserViewModel(UserModel item)
+        {
+            this.Nametxt = item.Nombre;
+            this.Usertxt = item.User;
+            this.PasswordTxt = item.Pw;
+            this.Idtxt = item.UserId;
+        }
+
 
     }
 }

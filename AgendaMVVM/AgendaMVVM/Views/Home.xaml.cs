@@ -22,5 +22,11 @@ namespace AgendaMVVM.Views
             //await Navigation.PopAsync();
             await Navigation.PopToRootAsync(); // HOME
         }
+
+        private async void ListaUser_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListUser());
+
+        }
     }
 }
